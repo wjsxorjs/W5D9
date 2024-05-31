@@ -44,6 +44,24 @@ public class Controller3 extends HttpServlet {
 			action = new DateAction();
 		}else if(type.equalsIgnoreCase("test")){
 			action = new TestAction();
+			/*
+			 action = new Action(){
+			 
+			 	@Override
+			 	public String execute(HttpServletRequest request, HttpServletResponse response){
+			 		request.setAttribute("test","TestAction활용");
+			 		return "/ex3/page3.jsp";
+			 	}
+			 
+			 };
+			도 가능하지만. 개인적인 심미적 만족감 때문에 그냥 만들었습니다.
+			까먹기도 했었고요.
+			*/
+		} else if(type.equalsIgnoreCase("hungry")) {
+				action = (req, res) -> {
+				 		req.setAttribute("hungry","배고프다");
+				 		return "/ex3/page4.jsp";
+				 };
 		}
 		
 		viewPath = action.execute(request, response);
