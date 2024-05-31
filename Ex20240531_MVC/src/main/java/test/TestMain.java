@@ -10,6 +10,10 @@ public class TestMain {
 		InterB b = (n1, n2) -> {
 			return n1+n2;
 		};
+
+		InterC c = () -> {
+			return "C";
+		};
 		
 		// -----------------------
 		/* 
@@ -17,7 +21,9 @@ public class TestMain {
 		 */
 		
 		a.test();
-		System.out.println(b.test(7, 8));
+		System.out.println(b.test(7, 6));
+		System.out.println(c.test());
+		
 		
 	}
 }
