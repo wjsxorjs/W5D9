@@ -4,20 +4,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>page 2</title>
+<title>page 3</title>
 </head>
 <body>
-	<h2>${date }</h2>
+	<h2>${test }</h2>
 	
-	<button onclick="goNext()">다음</button>
+	<button onclick="goPrev()">이전</button>
 	
 
     <script>
         // let goNext = function(){
         // function goNext(){
-        let goNext = () => {
+        let goPrev = () => {
         	
-            location.href="Controller3?type=test"; // forward가 아닌 redirect로 페이지 이동
+            location.href="Controller3?type=greet"; // forward가 아닌 redirect로 페이지 이동
             
         }
 

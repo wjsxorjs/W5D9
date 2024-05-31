@@ -9,8 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ex3.DateAction;
 import ex3.GreetAction;
+import ex3.DateAction;
+import ex3.TestAction;
 
 /**
  * Servlet implementation class Controller3
@@ -41,6 +42,8 @@ public class Controller3 extends HttpServlet {
 			action = new GreetAction();
 		} else if(type.equalsIgnoreCase("date")){
 			action = new DateAction();
+		}else if(type.equalsIgnoreCase("test")){
+			action = new TestAction();
 		}
 		
 		viewPath = action.execute(request, response);
